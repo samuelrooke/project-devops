@@ -8,8 +8,8 @@ public final class MyWindow extends JFrame{
     public static final int WINDOW_HEIGHT = 400;
 
     public MyWindow() {
-        super("window");
-        setSize(WINDOW_HEIGHT, WINDOW_WIDTH);
+        super("Tic-Tac-Toe");
+        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
