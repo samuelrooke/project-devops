@@ -21,5 +21,6 @@ public final class MyWindow extends JFrame{
 
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); 
     }
 }
