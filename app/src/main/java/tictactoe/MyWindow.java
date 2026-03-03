@@ -12,7 +12,7 @@ public final class MyWindow extends JFrame {
     private boolean isXTurn = true;
 
     public MyWindow() {
-        super("Tic-Tac-Toe");
+        super("Professional Tic-Tac-Toe");
         setLayout(new GridLayout(3, 3));
 
         for (int i = 0; i < 9; i++) {
