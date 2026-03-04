@@ -5,16 +5,24 @@ import javax.swing.JButton;
 import java.awt.GridLayout;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
 
 
 public final class MyWindow extends JFrame {
 
     private boolean isXTurn = true;
     private JButton[] buttons = new JButton[9];
+    private JLabel statusLabel;
 
     public MyWindow() {
         super("Professional Tic-Tac-Toe");
-        setLayout(new GridLayout(3, 3));
+
+        setLayout(new BorderLayout());
+        statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
+        JPanel gridPanel = new JPanel(new GridLayout(3, 3));
+
 
         for (int i = 0; i < 9; i++) {
             buttons[i] = new JButton("");
@@ -22,17 +30,23 @@ public final class MyWindow extends JFrame {
             buttons[i].setBackground(Color.DARK_GRAY);
             buttons[i].setForeground(Color.WHITE);
 
+
             final int index =i;
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
                     buttons[index].setText(isXTurn ? "X" : "O");
                     checkWinner();
                     isXTurn = !isXTurn;
+
+                    statusLabel.setText(isXTurn ? "Player X's Turn" : "Player O's Turn");
+
                 }
             });
 
-            add(buttons[i]);
+            gridPanel.add(buttons[i]);
         }
+        add(gridPanel, BorderLayout.CENTER);
+        add(statusLabel, BorderLayout.NORTH);
         setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -61,5 +75,6 @@ public final class MyWindow extends JFrame {
     private void resetBoard() {
         for (JButton b : buttons) b.setText("");
         isXTurn = true;
+        statusLabel.setText("Player X's Turn");
     }
 }
