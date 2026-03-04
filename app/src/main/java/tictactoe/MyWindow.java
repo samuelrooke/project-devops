@@ -38,6 +38,8 @@ public final class MyWindow extends JFrame {
                     checkWinner();
                     isXTurn = !isXTurn;
 
+                    statusLabel.setText(isXTurn ? "Player X's Turn" : "Player O's Turn");
+
                 }
             });
 
