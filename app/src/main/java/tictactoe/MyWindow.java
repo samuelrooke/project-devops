@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JLabel;
+import java.awt.BorderLayout;
 
 
 public final class MyWindow extends JFrame {
@@ -25,12 +26,14 @@ public final class MyWindow extends JFrame {
             buttons[i].setBackground(Color.DARK_GRAY);
             buttons[i].setForeground(Color.WHITE);
 
+
             final int index =i;
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
                     buttons[index].setText(isXTurn ? "X" : "O");
                     checkWinner();
                     isXTurn = !isXTurn;
+
                 }
             });
 
