@@ -1,1 +1,29 @@
+.gitignore     See http://gitignore.io
+ # content
+ .idea
+ .vscode
+ .vscode-test
+ .DS_Store
+ __MAC
+ *.bak
+ *.log
+ *.save
+ *.swp
+ *.tmp
+ vim.*
+ *.~
+ *[#~]
+ .*[#~]
 
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# Ignore Kotlin plugin data
+.kotlin
+
+# Ignore .class files
+
+.class
