@@ -18,6 +18,7 @@ public final class MyWindow extends JFrame {
 
     public MyWindow() {
         super("Professional Tic-Tac-Toe");
+
         setLayout(new BorderLayout());
         statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
         JPanel gridPanel = new JPanel(new GridLayout(3, 3));
@@ -40,7 +41,7 @@ public final class MyWindow extends JFrame {
                 }
             });
 
-            add(buttons[i]);
+            gridPanel.add(buttons[i]);
         }
         setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
