@@ -75,13 +75,13 @@ public class Menu extends JPanel {
                 JLabel dialogLabel =  new JLabel("Choose how many players"); // Label object, used as a title for the dialog
 
                 JButton onePlayer = new JButton("1 Player");
-                onePlayer.addActionListener(e -> {
+                onePlayer.addActionListener(ev -> {
                     playerCount = 1;
                     dialog.dispose(); // Closes the pop up
                 });
 
                 JButton twoPlayer = new JButton("2 Players");
-                 twoPlayer.addActionListener(e -> {
+                 twoPlayer.addActionListener(ev -> {
                     playerCount = 2;
                     dialog.dispose(); // Closes the pop up
                 });
