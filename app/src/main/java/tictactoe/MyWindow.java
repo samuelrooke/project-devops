@@ -63,6 +63,6 @@ public final class MyWindow extends JFrame {
 
     private void resetBoard() {
         for (JButton b : buttons) b.setText("");
-        isXTurn = false; // Will flip back to true on next click logic
+        isXTurn = false;
     }
 }
