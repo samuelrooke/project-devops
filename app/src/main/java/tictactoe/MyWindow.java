@@ -5,6 +5,7 @@ import javax.swing.JButton;
 import java.awt.GridLayout;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JLabel;
 
 
 public final class MyWindow extends JFrame {
