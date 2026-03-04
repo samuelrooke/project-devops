@@ -1,3 +1,3 @@
-public final class GameLogic {
-    
+public final class GameLogic implements Logic{
+
 }
