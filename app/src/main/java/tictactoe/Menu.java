@@ -20,10 +20,10 @@ public class Menu extends JPanel {
         JButton startButton = new JButton("Start");
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // Centres the object
         startButton.addActionListener(new ActionListener() {
-            @override
-            public void actionPerformed(Actionvent e) {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-                JDialog dialog = new JDialog(Menu);
+                JDialog dialog = new JDialog(window, "Choose your players", true);
 
                 JPanel dialogPanel = new JPanel();
                 dialogPanel.setLayout(new BoxLayout(dialogPanel, BoxLayout.Y_AXIS));
@@ -42,7 +42,9 @@ public class Menu extends JPanel {
                 dialogPanel.add(twoPlayer);
 
                 dialog.add(dialogPanel);
-                dialog.setLocationRelativeTo()
+
+                dialog.pack();
+                dialog.setLocationRelativeTo(window);
                 dialog.setVisible(true);
             }
         });
