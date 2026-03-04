@@ -22,6 +22,7 @@ public final class MyWindow extends JFrame {
         statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
         JPanel gridPanel = new JPanel(new GridLayout(3, 3));
 
+
         for (int i = 0; i < 9; i++) {
             buttons[i] = new JButton("");
             buttons[i].setFont(new Font("Arial", Font.BOLD, 55));
