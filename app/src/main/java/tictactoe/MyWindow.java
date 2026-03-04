@@ -12,6 +12,7 @@ public final class MyWindow extends JFrame {
 
     private boolean isXTurn = true;
     private JButton[] buttons = new JButton[9];
+    private JLabel statusLabel;
 
     public MyWindow() {
         super("Professional Tic-Tac-Toe");
