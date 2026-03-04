@@ -1,7 +1,7 @@
 package tictactoe;
 
 public final class GameLogic implements Logic{
-    private void checkWinner() {
+    public void checkWinner() {
         int[][] winConditions = {
             {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // Rows
             {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // Columns
@@ -20,7 +20,7 @@ public final class GameLogic implements Logic{
         }
     }
 
-    private void resetBoard() {
+    public void resetBoard() {
         for (JButton b : buttons) b.setText("");
         isXTurn = true;
         statusLabel.setText("Player X's Turn");
