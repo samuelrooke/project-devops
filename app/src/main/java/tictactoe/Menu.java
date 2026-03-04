@@ -27,7 +27,7 @@ public class Menu extends JPanel {
      * @param window the parent JFrame used as a container
      * @param TBD the game panel that starts when user presses start and chooses the players
      */
-    public Menu(JFrame window) {
+    public Menu(JFrame window) { // this needs the game panel as an argument
         this.window = window;
         // Need the file that has the game logic here "this.<file> = <file>;""
         initialize();
