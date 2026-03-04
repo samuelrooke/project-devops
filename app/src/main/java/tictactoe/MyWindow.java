@@ -9,9 +9,6 @@ import java.awt.Color;
 
 public final class MyWindow extends JFrame {
 
-    public static final int WINDOW_WIDTH = 450;
-    public static final int WINDOW_HEIGHT = 400;
-
     private boolean isXTurn = true;
 
     public MyWindow() {
@@ -33,7 +30,7 @@ public final class MyWindow extends JFrame {
 
             add(button);
         }
-        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
