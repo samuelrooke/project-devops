@@ -16,6 +16,10 @@ public final class App {
         SwingUtilities.invokeLater(() -> {
             MyWindow window = new MyWindow();
             window.setVisible(true);
+
+            // Menu menuPanel = new Menu(window);
+            // window.add(menuPanel); // when game logic is moved from "MyWindow.java" make this visible
+
         });
     }
 }
