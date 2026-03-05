@@ -19,7 +19,7 @@ public final class GameLogic implements Logic {
     }
 
     @Override
-    public boolean checkWinner() {
+    public boolean checkWinner() {           // Evaluates the board to determine if a player has won
         int[][] winConditions = {            // Winning combinations for rows, columns, and diagonals
             {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // Rows
             {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // Columns
