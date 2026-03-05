@@ -79,6 +79,9 @@ public final class MyWindow extends JFrame {
             buttons[i].setBackground(Color.GRAY);
             buttons[i].setForeground(Color.WHITE);
 
+    // Adds an action listener to each button to handle moves,
+    // check for a winner or draw, update the status label,
+    // and trigger AI moves if enabled.
             final int index = i;
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
