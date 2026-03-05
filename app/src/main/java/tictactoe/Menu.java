@@ -83,12 +83,12 @@ public class Menu extends JPanel {
                     dialog.dispose(); // pop up closes
                 });
 
-                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-                dialogPanel.add(dialogLabel);
-                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-                dialogPanel.add(onePlayer);
-                dialogPanel.add(twoPlayer);
-                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10))); // adds 10 pixels of space between the items
+                dialogPanel.add(dialogLabel); // adds the title
+                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10))); // adds 10 pixels of space between the items
+                dialogPanel.add(onePlayer); // adds playerOne button
+                dialogPanel.add(twoPlayer);// adds playerTwo button
+                dialogPanel.add(Box.createRigidArea(new Dimension(0, 10))); // adds 10 pixels of space between the items
 
                 dialog.add(dialogPanel);
                 dialog.pack();
