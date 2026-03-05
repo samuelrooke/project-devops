@@ -25,8 +25,9 @@ public class Menu extends JPanel {
         this.window = window;
         initialize();
     }
+
     /**
-     * A helper method to be used with Menu constructor.
+     * This method is used to initialize the main title, start button and quit button
      */
     private void initialize() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
