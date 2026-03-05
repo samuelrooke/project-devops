@@ -5,12 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Menu is the main class for the game tic-tac-toe.
- *
- * @author <name here>
- */
-
 public class Menu extends JPanel {
     private JFrame window;
     private int playerCount = 0;
