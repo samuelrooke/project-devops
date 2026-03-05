@@ -46,8 +46,9 @@ public final class MyWindow extends JFrame {
                         for (JButton b : buttons) b.setEnabled(false);
                         showEndGameOptions();
                     } 
-                    else if (moveCount == 9) { // <--- The Draw Condition
+                    else if (moveCount == 9) {
                         statusLabel.setText("It's a Draw!");
+                        showEndGameOptions();
                     } 
                     else {
                         isXTurn = !isXTurn;
