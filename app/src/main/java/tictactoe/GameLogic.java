@@ -26,7 +26,7 @@ public final class GameLogic implements Logic {
             {0, 4, 8}, {2, 4, 6}             // Diagonals
         };
 
-        for (int[] pos : winConditions) {
+        for (int[] pos : winConditions) {    // Iterate through all possible win conditions
             String b1 = buttons[pos[0]].getText();
             String b2 = buttons[pos[1]].getText();
             String b3 = buttons[pos[2]].getText();
