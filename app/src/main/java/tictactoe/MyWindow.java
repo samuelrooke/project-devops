@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public final class MyWindow extends JFrame {
+
+    /**
+     * A boolean for checking whether it's
+     * the player X's turn.
+     */
     private boolean isXTurn = true;
     private JButton[] buttons = new JButton[9];
     private JLabel statusLabel;
