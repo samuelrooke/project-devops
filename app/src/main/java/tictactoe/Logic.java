@@ -1,6 +1,6 @@
 package tictactoe;
 
 public interface Logic {
-    void checkWinner();
+    boolean checkWinner();
     void resetBoard();
 }
