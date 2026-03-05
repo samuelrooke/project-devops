@@ -82,6 +82,7 @@ public class Menu extends JPanel {
                 twoPlayer.setFont(buttonFont); // sets the font, uses the earlier button font
                 twoPlayer.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the the item is centered
                 twoPlayer.setMaximumSize(new Dimension(160, 70)); // max size so that the buttons are equal in size
+                twoPlayer.setBorder(new LineBorder(Color.GRAY, 1, true));
                 twoPlayer.addActionListener(ev -> {
                     playerCount = 2; // playing with someone
                     dialog.dispose(); // pop up closes
