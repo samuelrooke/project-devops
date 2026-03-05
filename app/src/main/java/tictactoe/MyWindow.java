@@ -106,7 +106,8 @@ public final class MyWindow extends JFrame {
             });
             gridPanel.add(buttons[i]);
         }
-
+// Adds the game grid and status label to the window,
+// then refreshes the layout and repaints the frame.
         add(gridPanel, BorderLayout.CENTER);
         add(statusLabel, BorderLayout.NORTH);
         this.revalidate();
