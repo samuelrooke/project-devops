@@ -139,10 +139,10 @@ public final class MyWindow extends JFrame {
 /** Makes the AI perform a move by clicking a random available button. */
     private void performAiMove() {
     int moveIndex = logic.getSmartMove();
-    if (moveIndex != -1) {
-        buttons[moveIndex].doClick();
+        if (moveIndex != -1) {
+            buttons[moveIndex].doClick();
+        }
     }
-}
 
 
 }
