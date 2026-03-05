@@ -10,8 +10,16 @@ public final class MyWindow extends JFrame {
     private Logic logic;
     private int moveCount = 0;
 
-    public void setIsXTurn(boolean isXTurn) { this.isXTurn = isXTurn; }
-    public boolean getIsXTurn() { return isXTurn; }
+    /**
+     * Setter for isXTurn.
+     */
+    public void setIsXTurn(boolean isXTurn) {
+        this.isXTurn = isXTurn;
+    }
+
+    public boolean getIsXTurn() {
+        return isXTurn;
+    }
 
     public MyWindow() {
         super("Tic-Tac-Toe");
