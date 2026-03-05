@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
  */
 public class Menu extends JPanel {
     private JFrame window;
-    private int playerCount = 0;
+    private int playerCount = 0; // is used in startbutton, decides how many playeres are playing the game
 
     Font titleFont = new Font("Arial", Font.BOLD, 30); // this font is used for the titles
     Font buttonFont = new Font("Arial", Font.BOLD, 18); // this font is used for the buttons
@@ -63,14 +63,14 @@ public class Menu extends JPanel {
 
                 JLabel dialogLabel = new JLabel("Choose how many players"); // used as a title for the pop up
                 dialogLabel.setFont(titleFont); // sets the font, uses the titlefont from earlier
-                dialogLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the item is center.
+                dialogLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the item is centered.
 
-                JButton onePlayer = new JButton("1 Player");
-                onePlayer.setFont(buttonFont);
-                onePlayer.setAlignmentX(Component.CENTER_ALIGNMENT);
+                JButton onePlayer = new JButton("1 Player"); // button for choosing to play on your own against ai
+                onePlayer.setFont(buttonFont); // sets the font, uses the earlier button font
+                onePlayer.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the the item is centered.
                 onePlayer.addActionListener(ev -> {
-                    playerCount = 1;
-                    dialog.dispose();
+                    playerCount = 1; // playing on your own against ai.
+                    dialog.dispose(); // closes pop up
                 });
 
                 JButton twoPlayer = new JButton("2 Players");
