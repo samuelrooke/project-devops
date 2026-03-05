@@ -42,7 +42,7 @@ public class Menu extends JPanel {
         startButton.setFont(buttonFont); // uses the buttonfont variable
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure that button is in the center of the item
         startButton.setMaximumSize(new Dimension(120, 50)); // max size so that the buttons are equal in size
-        startButton.setBorder(new LineBorder(Color.GRAY, 1, true));
+        startButton.setBorder(new LineBorder(Color.GRAY, 1, true)); // makes the button look rounder
 
         startButton.addActionListener(new ActionListener() {
 
@@ -116,7 +116,7 @@ public class Menu extends JPanel {
         quitButton.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the item is centered
         quitButton.setFont(buttonFont); // sets the font, uses the earlier button font
         quitButton.setMaximumSize(new Dimension(120, 50)); // sets maximum size for the button so that they are the same size
-        quitButton.setBorder(new LineBorder(Color.GRAY, 1, true));
+        quitButton.setBorder(new LineBorder(Color.GRAY, 1, true)); // makes the button look rounder
         quitButton.addActionListener(e -> System.exit(0)); // exits the application when pressed.
 
         add(Box.createVerticalGlue());
