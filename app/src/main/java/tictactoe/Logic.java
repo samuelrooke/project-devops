@@ -16,4 +16,10 @@ public interface Logic {
      * @return The index of the chosen button (0-8), or -1 if no moves are available.
      */
     int getRandomMove();
+    /**
+     * Calculates an optimized move for the AI by analyzing the board for 
+     * immediate threats or winning opportunities.
+     * @return The index of the chosen button (0-8), or -1 if no moves are available.
+     */
+    int getSmartMove();
 }
