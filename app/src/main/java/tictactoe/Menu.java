@@ -5,6 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Menu panel for the Tic-Tac-Toe game.
+ * Displays the title and allows the player to start or quit the game.
+ */
 public class Menu extends JPanel {
     private JFrame window;
     private int playerCount = 0;
