@@ -68,6 +68,7 @@ public final class MyWindow extends JFrame {
         this.setLayout(new BorderLayout());
 
         statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
+        // Panel to hold 3x3 grid of buttons
         JPanel gridPanel = new JPanel(new GridLayout(3, 3));
         logic = new GameLogic(this, statusLabel, buttons);
 
