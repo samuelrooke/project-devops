@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.border.LineBorder;
+
 /**
  * This class is Menu panel for tic tac toe
  *
@@ -40,6 +42,7 @@ public class Menu extends JPanel {
         startButton.setFont(buttonFont); // uses the buttonfont variable
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure that button is in the center of the item
         startButton.setMaximumSize(new Dimension(120, 50)); // max size so that the buttons are equal in size
+        startButton.setBorder(new LineBorder(Color.GRAY, 1, true));
 
         startButton.addActionListener(new ActionListener() {
 
@@ -69,6 +72,7 @@ public class Menu extends JPanel {
                 onePlayer.setFont(buttonFont); // sets the font, uses the earlier button font
                 onePlayer.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the the item is centered
                 onePlayer.setMaximumSize(new Dimension(160, 70)); // max size so that the buttons are equal in size
+                onePlayer.setBorder(new LineBorder(Color.GRAY, 1, true));
                 onePlayer.addActionListener(ev -> {
                     playerCount = 1; // playing on your own against ai
                     dialog.dispose(); // closes pop up
