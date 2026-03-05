@@ -18,6 +18,8 @@ public final class GameLogic implements Logic {
      * a MyWindow, JLabel and Jbutton[] instances as arguments.
      * @param parentWindow The composite MyWindow that has this as a field
      * @param statusLabel The JLabel label for displaying whose turn it is
+     * @param buttons The JButton[] that contains the buttons for parentWindow
+     * that are pressed when the game is played
      */
     public GameLogic(MyWindow parentWindow, JLabel statusLabel, JButton[] buttons) {
         this.parentWindow = parentWindow;
