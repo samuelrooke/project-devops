@@ -1,34 +1,30 @@
 package tictactoe;
 
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import java.awt.GridLayout;
-import java.awt.Font;
-import java.awt.Color;
-import javax.swing.JLabel;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-
+import javax.swing.*;
+import java.awt.*;
 
 public final class MyWindow extends JFrame {
-
     private boolean isXTurn = true;
     private JButton[] buttons = new JButton[9];
     private JLabel statusLabel;
     private Logic logic;
+    private int moveCount = 0;
 
-    public void setIsXTurn(boolean isXTurn) {
-        this.isXTurn = isXTurn;
-    }
-
-    public boolean getIsXTurn() {
-        return isXTurn;
-    }
+    public void setIsXTurn(boolean isXTurn) { this.isXTurn = isXTurn; }
+    public boolean getIsXTurn() { return isXTurn; }
 
     public MyWindow() {
-        super("Professional Tic-Tac-Toe");
+        super("Tic-Tac-Toe");
+        setSize(400, 450);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+    }
 
-        setLayout(new BorderLayout());
+    public void initializeGame(int playerCount) {
+        this.moveCount = 0;
+        this.getContentPane().removeAll();
+        this.setLayout(new BorderLayout());
+        
         statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
         JPanel gridPanel = new JPanel(new GridLayout(3, 3));
         logic = new GameLogic(this, statusLabel, buttons);
@@ -39,26 +35,50 @@ public final class MyWindow extends JFrame {
             buttons[i].setBackground(Color.DARK_GRAY);
             buttons[i].setForeground(Color.WHITE);
 
-
-            final int index =i;
+            final int index = i;
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
                     buttons[index].setText(isXTurn ? "X" : "O");
-                    logic.checkWinner();
-                    isXTurn = !isXTurn;
+                    moveCount++;
 
-                    statusLabel.setText(isXTurn ? "Player X's Turn" : "Player O's Turn");
-
+                    if (logic.checkWinner()) {
+                        statusLabel.setText("Player " + (isXTurn ? "X" : "O") + " Wins!");
+                        for (JButton b : buttons) b.setEnabled(false);
+                        showEndGameOptions();
+                    } 
+                    else if (moveCount == 9) {
+                        statusLabel.setText("It's a Draw!");
+                        showEndGameOptions();
+                    } 
+                    else {
+                        isXTurn = !isXTurn;
+                        statusLabel.setText("Player " + (isXTurn ? "X" : "O") + "'s Turn");
+                    }
                 }
             });
-
             gridPanel.add(buttons[i]);
         }
+        
         add(gridPanel, BorderLayout.CENTER);
         add(statusLabel, BorderLayout.NORTH);
-        setSize(400, 450);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        this.revalidate();
+        this.repaint();
     }
 
+    private void showEndGameOptions() {
+        JPanel bottomPanel = new JPanel();
+        JButton menuButton = new JButton("Back to Menu");
+        
+        menuButton.addActionListener(e -> {
+            this.getContentPane().removeAll();
+            this.add(new Menu(this)); 
+            this.revalidate();
+            this.repaint();
+        });
+
+        bottomPanel.add(menuButton);
+        this.add(bottomPanel, BorderLayout.SOUTH);
+        this.revalidate();
+        this.repaint();
+    }
 }
