@@ -39,11 +39,12 @@ public final class MyWindow extends JFrame {
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
                     buttons[index].setText(isXTurn ? "X" : "O");
-                    moveCount++; // <--- Increment the counter!
+                    moveCount++;
 
                     if (logic.checkWinner()) {
                         statusLabel.setText("Player " + (isXTurn ? "X" : "O") + " Wins!");
-                        // (Optional) add a method to disable buttons here
+                        for (JButton b : buttons) b.setEnabled(false);
+                        showEndGameOptions();
                     } 
                     else if (moveCount == 9) { // <--- The Draw Condition
                         statusLabel.setText("It's a Draw!");
