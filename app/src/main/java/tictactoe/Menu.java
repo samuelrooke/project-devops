@@ -58,12 +58,12 @@ public class Menu extends JPanel {
                  * boolean, deciding whether the pop up is modal or not.
                  */
                 JDialog dialog = new JDialog(window, "Choose your players", true); // the pop up container
-                JPanel dialogPanel = new JPanel(); // object where we add the title, and buttons for deciding how many players.
-                dialogPanel.setLayout(new BoxLayout(dialogPanel, BoxLayout.Y_AXIS)); // makes sure that items go from top to bottom.
+                JPanel dialogPanel = new JPanel(); // object where we add the title, and buttons for deciding how many players
+                dialogPanel.setLayout(new BoxLayout(dialogPanel, BoxLayout.Y_AXIS)); // makes sure that items go from top to bottom
 
-                JLabel dialogLabel = new JLabel("Choose how many players");
-                dialogLabel.setFont(titleFont);
-                dialogLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+                JLabel dialogLabel = new JLabel("Choose how many players"); // used as a title for the pop up
+                dialogLabel.setFont(titleFont); // sets the font, uses the titlefont from earlier
+                dialogLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the item is center.
 
                 JButton onePlayer = new JButton("1 Player");
                 onePlayer.setFont(buttonFont);
