@@ -21,6 +21,7 @@ public final class MyWindow extends JFrame {
     /** Returns true if it's X's turn, false otherwise. */
     public boolean getIsXTurn() { return isXTurn; }
 
+    /** Initializes the main Tic-Tac-Toe window and sets default size and behavior. */
     public MyWindow() {
         super("Tic-Tac-Toe");
         setSize(400, 450);
