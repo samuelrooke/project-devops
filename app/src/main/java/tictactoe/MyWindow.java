@@ -20,6 +20,9 @@ public final class MyWindow extends JFrame {
      * turn it is.
      */
     private JLabel statusLabel;
+    /**
+     * The instance of class implementing Logic.
+     */
     private Logic logic;
     private int moveCount = 0;
 
