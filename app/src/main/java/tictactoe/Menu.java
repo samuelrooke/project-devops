@@ -32,6 +32,7 @@ public class Menu extends JPanel {
      * This method is used to initialize the main title, start button and quit button
      */
     private void initialize() {
+        this.setBackground(new Color(180,180,180)); // soft gray for the whole menu
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // This is the layout of the menu, made sure that the items go from top to bottom
 
         JLabel titleLabel = new JLabel("Tic-Tac-Toe"); // title of the game
@@ -62,6 +63,7 @@ public class Menu extends JPanel {
                  */
                 JDialog dialog = new JDialog(window, "Choose your players", true); // the pop up container
                 JPanel dialogPanel = new JPanel(); // object where we add the title, and buttons for deciding how many players
+                dialogPanel.setBackground(new Color(180, 180, 180)); // light gray
                 dialogPanel.setLayout(new BoxLayout(dialogPanel, BoxLayout.Y_AXIS)); // makes sure that items go from top to bottom
 
                 JLabel dialogLabel = new JLabel("Choose how many players"); // used as a title for the pop up
