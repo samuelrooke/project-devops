@@ -116,6 +116,7 @@ public class Menu extends JPanel {
         quitButton.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure the item is centered
         quitButton.setFont(buttonFont); // sets the font, uses the earlier button font
         quitButton.setMaximumSize(new Dimension(120, 50)); // sets maximum size for the button so that they are the same size
+        quitButton.setBorder(new LineBorder(Color.GRAY, 1, true));
         quitButton.addActionListener(e -> System.exit(0)); // exits the application when pressed.
 
         add(Box.createVerticalGlue());
