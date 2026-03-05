@@ -51,7 +51,7 @@ public final class MyWindow extends JFrame {
      */
     public MyWindow() {
         super("Tic-Tac-Toe");
-        setSize(400, 450);
+        setSize(750, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
