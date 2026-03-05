@@ -90,13 +90,13 @@ public class Menu extends JPanel {
                 dialogPanel.add(twoPlayer);// adds playerTwo button
                 dialogPanel.add(Box.createRigidArea(new Dimension(0, 10))); // adds 10 pixels of space between the items
 
-                dialog.add(dialogPanel);
-                dialog.pack();
-                dialog.setLocationRelativeTo(window);
-                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-                dialog.setVisible(true);
+                dialog.add(dialogPanel); // adds the dialog.panel to the pop up
+                dialog.pack(); // resizes the window to fit the contents
+                dialog.setLocationRelativeTo(window); // centers the pop up relative to the main JFrame
+                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); // closes the pop up when pressed "x"
+                dialog.setVisible(true); // sets the pop up visible
 
-                if (playerCount > 0) {
+                if (playerCount > 0) { // initializes the game panel
                     ((MyWindow) window).initializeGame(playerCount);
                 }
 
@@ -110,11 +110,11 @@ public class Menu extends JPanel {
         quitButton.addActionListener(e -> System.exit(0)); // exits the application when pressed.
 
         add(Box.createVerticalGlue());
-        add(titleLabel);
-        add(Box.createRigidArea(new Dimension(0, 20)));
-        add(startButton);
-        add(Box.createRigidArea(new Dimension(0, 10)));
-        add(quitButton);
+        add(titleLabel); // adds the main title
+        add(Box.createRigidArea(new Dimension(0, 20))); // space between items
+        add(startButton); // adds the start button
+        add(Box.createRigidArea(new Dimension(0, 10))); // space betwee items
+        add(quitButton); // adds the quit button
         add(Box.createVerticalGlue());
     }
 }
