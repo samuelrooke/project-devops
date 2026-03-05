@@ -27,6 +27,9 @@ public final class MyWindow extends JFrame {
         return isXTurn;
     }
 
+    /**
+     * A no-param constructor for MyWindow.
+     */
     public MyWindow() {
         super("Tic-Tac-Toe");
         setSize(400, 450);
