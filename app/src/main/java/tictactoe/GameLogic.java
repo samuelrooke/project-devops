@@ -70,6 +70,10 @@ public final class GameLogic implements Logic {
         statusLabel.setText("Player X's Turn");
     }
 
+/**
+ * Returns a list of indexes of buttons that are currently empty.
+ * These are the available moves for the next player or AI.
+ */
     public List<Integer> getAvailableMoves() {
     List<Integer> available = new ArrayList<>();
     for (int i = 0; i < buttons.length; i++) {
