@@ -13,7 +13,9 @@ public class Menu extends JPanel {
         this.window = window;
         initialize();
     }
-
+    /**
+     * A helper method to be used with Menu constructor.
+     */
     private void initialize() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 

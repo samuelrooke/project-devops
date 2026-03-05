@@ -69,11 +69,10 @@ public final class GameLogic implements Logic {
         parentWindow.setIsXTurn(true);
         statusLabel.setText("Player X's Turn");
     }
-
-/**
- * Returns a list of indexes of buttons that are currently empty.
- * These are the available moves for the next player or AI.
- */
+    /**
+     * A method for getting a list of available moves.
+     * @return The List<integer> of available moves
+     */
     public List<Integer> getAvailableMoves() {
     List<Integer> available = new ArrayList<>();
     for (int i = 0; i < buttons.length; i++) {
@@ -128,7 +127,4 @@ private boolean wouldWin(int index, String mark) {
         // fallback to random
         return getRandomMove();
     }
-
-
-
 }
