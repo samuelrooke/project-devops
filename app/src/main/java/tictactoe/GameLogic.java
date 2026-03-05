@@ -9,12 +9,30 @@ public final class GameLogic implements Logic {
     private JLabel statusLabel;
     private JButton[] buttons;
 
+    /**
+     * Private no-param constructor for GameLogic
+     */
+    private GameLogic() { }
+
+    /**
+     * Constructor for GameLogic that takes
+     * a MyWindow, JLabel and Jbutton[] instances as arguments.
+     * @param parentWindow The composite MyWindow that has this as a field
+     * @param statusLabel The JLabel label for displaying whose turn it is
+     * @param buttons The JButton[] that contains the buttons for parentWindow
+     * that are pressed when the game is played
+     */
     public GameLogic(MyWindow parentWindow, JLabel statusLabel, JButton[] buttons) {
         this.parentWindow = parentWindow;
         this.statusLabel = statusLabel;
         this.buttons = buttons;
     }
 
+    /**
+     * A method for checking the winner of the game
+     * by comparing the pressed buttons' positions
+     * against predefined winning positions.
+     */
     @Override
     public boolean checkWinner() {
         int[][] winConditions = {
@@ -35,7 +53,9 @@ public final class GameLogic implements Logic {
         
         return false;
     }
-
+    /**
+     * A method for resetting the board or the game state.
+     */
     public void resetBoard() {
         for (JButton b : buttons) b.setText("");
         parentWindow.setIsXTurn(true);
