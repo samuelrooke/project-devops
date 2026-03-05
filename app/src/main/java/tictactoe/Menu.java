@@ -34,12 +34,12 @@ public class Menu extends JPanel {
 
         JLabel titleLabel = new JLabel("Tic-Tac-Toe"); // title of the game
         titleLabel.setFont(titleFont); // uses the titlefont variable
-        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure that the label is in center of the boxLayout
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure that the labels text is in center of the item
 
-        JButton startButton = new JButton("Start");
-        startButton.setFont(buttonFont);
-        startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        startButton.setMaximumSize(new Dimension(120, 50));
+        JButton startButton = new JButton("Start"); // button to start the game
+        startButton.setFont(buttonFont); // uses the buttonfont variable
+        startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // makes sure that button is in the center of the item
+        startButton.setMaximumSize(new Dimension(120, 50)); // max size so that the buttons are equal in size
 
         startButton.addActionListener(new ActionListener() {
             @Override
