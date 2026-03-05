@@ -30,7 +30,7 @@ public class Menu extends JPanel {
      * This method is used to initialize the main title, start button and quit button
      */
     private void initialize() {
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // This is the layout of the menu, made sure that the items go from top to bottom
 
         JLabel titleLabel = new JLabel("Tic-Tac-Toe"); // title of the game
         titleLabel.setFont(titleFont); // uses the titlefont variable
