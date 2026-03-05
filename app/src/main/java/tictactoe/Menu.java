@@ -12,9 +12,9 @@ public class Menu extends JPanel {
     private JFrame window;
     private int playerCount = 0;
 
-    Font titleFont = new Font("Arial", Font.BOLD, 30);
-    Font buttonFont = new Font("Arial", Font.BOLD, 18);
-    Font dialogFont = new Font("Arial", Font.PLAIN, 16);
+    Font titleFont = new Font("Arial", Font.BOLD, 30); // this font is used for the titles
+    Font buttonFont = new Font("Arial", Font.BOLD, 18); // this font is used for the buttons
+    Font dialogFont = new Font("Arial", Font.PLAIN, 16); // this font is used for the dialog object in start button.
 
     public Menu(JFrame window) {
         this.window = window;
