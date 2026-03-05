@@ -53,7 +53,9 @@ public final class GameLogic implements Logic {
         
         return false;
     }
-
+    /**
+     * A method for resetting the board or the game state.
+     */
     public void resetBoard() {
         for (JButton b : buttons) b.setText("");
         parentWindow.setIsXTurn(true);
