@@ -64,7 +64,7 @@ public final class GameLogic implements Logic {
         parentWindow.setIsXTurn(true);
         statusLabel.setText("Player X's Turn");
     }
-    
+
     public List<Integer> getAvailableMoves() {
     List<Integer> available = new ArrayList<>();
     for (int i = 0; i < buttons.length; i++) {
@@ -80,6 +80,18 @@ public int getRandomMove() {
     if (available.isEmpty()) return -1;
     Random rand = new Random();
     return available.get(rand.nextInt(available.size()));
+}
+ /**
+ * Simulates a move to see if it results in a win.
+ * This is the foundation of the ai logic,
+ * Which thinks where to put the O
+ */
+private boolean wouldWin(int index, String mark) {
+    if (!buttons[index].getText().isEmpty()) return false;
+    buttons[index].setText(mark);
+    boolean win = checkWinner();
+    buttons[index].setText(""); // Clean up simulation
+    return win;
 }
 
 }
