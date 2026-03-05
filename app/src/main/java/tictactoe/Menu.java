@@ -4,7 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * This class is Menu panel for tic tac toe
+ *
+ */
 public class Menu extends JPanel {
     private JFrame window;
     private int playerCount = 0;
