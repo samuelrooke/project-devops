@@ -2,6 +2,9 @@ package tictactoe;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public final class GameLogic implements Logic {
 
@@ -61,4 +64,22 @@ public final class GameLogic implements Logic {
         parentWindow.setIsXTurn(true);
         statusLabel.setText("Player X's Turn");
     }
+    
+    public List<Integer> getAvailableMoves() {
+    List<Integer> available = new ArrayList<>();
+    for (int i = 0; i < buttons.length; i++) {
+        if (buttons[i].getText().isEmpty()) {
+            available.add(i);
+        }
+    }
+    return available;
+}
+
+public int getRandomMove() {
+    List<Integer> available = getAvailableMoves();
+    if (available.isEmpty()) return -1;
+    Random rand = new Random();
+    return available.get(rand.nextInt(available.size()));
+}
+
 }
